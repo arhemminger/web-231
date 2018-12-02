@@ -35,13 +35,13 @@ console.log("\n");
 var empFirstName = "Bob";
 var empLastName = "Smith";
 var empAddress = "505 Main Street Omaha, NE";
-var empPayRate = (10.5).toLocaleString("en-US", {style: "currency", currency: "USD", minimumFractionDigits: 2});
+var empPayRate = 10.5.toFixed(2);
 var empHireDate = new Date("5/22/2016").toLocaleDateString('en-US');
 
 var empSummary = "First Name: " + empFirstName + "\n"
     + "Last Name: " + empLastName + "\n"
     + "Address: " + empAddress + "\n"
-    + "Pay Rate: " + empPayRate + "\n"
+    + "Pay Rate: $" + empPayRate + "\n"
     + "Hire Date: " + empHireDate + "\n";
 
 console.log(empSummary);
