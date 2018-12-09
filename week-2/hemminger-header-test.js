@@ -8,6 +8,11 @@
 ;===========================================
 */
 
+/**
+* Params: firstName, lastName, assignment
+* Response: output 
+* Description: Returns a well-formatted string header
+*/
 var header = require('./hemminger-header.js');
 
 console.log(header.display("Andrew", "Hemminger", "Assignment 2.2 - Header")); 
