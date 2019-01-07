@@ -4,7 +4,7 @@
 ; Author: Professor Krasso
 ; Date:   6 January 2019
 ; Modified by: Andrew Hemminger
-; Description: Sample program with errors.
+; Description: Exercise 4.2 arrays
 ;===========================================
 */
 var header = require('../hemminger-header.js');
@@ -24,3 +24,5 @@ function getFruit(arr) {
 
 //Output of getFruit() function
 getFruit(a);
+
+//End program
