@@ -13,8 +13,10 @@ console.log('\n');
 
 // Start program
 
+//declaring variable with array values
 var foods = ["Oysters", "Shrimp", "Steak", "Tacos", "Sushi"];
 
+//outputting variable values using built-in foreach function
 foods.forEach(function(food) {
   console.log(food);
 });
