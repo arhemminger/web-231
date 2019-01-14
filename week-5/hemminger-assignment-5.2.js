@@ -16,7 +16,7 @@ console.log('\n');
 //declaring variable with array values
 var foods = ["Oysters", "Shrimp", "Steak", "Tacos", "Sushi"];
 
-//outputting variable values using built-in foreach function
+//outputting variable values using built-in forEach function
 foods.forEach(function(food) {
   console.log(food);
 });
