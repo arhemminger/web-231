@@ -1,0 +1,51 @@
+<!--
+============================================
+; Title:  JavaScript in Web Browsers
+; Author: Professor Krasso
+; Date:   24 January 2019
+; Modified by: Andrew Hemminger
+; Description: Exercise 7.1 JavaScript in Web Browsers
+;===========================================
+-->
+<script>
+var header = require('../hemminger-header.js');
+console.log(header.display('Andrew', 'Hemminger', 'Exercise 7.1'));
+console.log('\n');
+</script>
+
+<!--
+  Expected Output:
+The Current time is:
+00:00:00 XX
+(Central Standard Time)
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 7.1 - Javascript in Web Browsers</title>
+    <script>
+      //function that gets and displays the current time.
+      function currentTime() {
+        var time = document.getElementById('clock');
+        var curr = new Date();
+        time.innerHTML = currentTime.toLocaleTimeString();  //formatting the returned current time <--.
+        setTimeout(currTime, 1000); //refresh returned time every second
+      }
+      window.onload = currentTime;   //Display time on page load
+    </script>
+    <style>
+    #clock {
+      font: bold 24pt Times;
+      background:rgb(4, 101, 247);
+    }
+    </style>
+  </head>
+  <body>
+    <h1>The current time is:</h1>
+    <p><span id="clock"></span> <!-- display the styled clock -->
+    <br>(Central Standard Time)</p>
+  </body>
+</html>
+
+
