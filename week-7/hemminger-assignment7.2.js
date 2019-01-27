@@ -39,5 +39,4 @@ for (let x = 0; x < Inventors.length; x++) {
   console.log(Inventors[x].id + ' ' + Inventors[x].firstName + ' ' + Inventors[x].lastName + ' ' + Inventors[x].title)
 
 }
-
 // end program
