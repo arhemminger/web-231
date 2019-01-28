@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Title: Discussion Board-7.1.html
+Date: 1/24/2019
+Author: Gabriel Sanchez
+Description: JavaScript Web Browser
+-->
+<html lang = 'en'>
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Planets</title>
+</head>
+<body>
+	<h1>What Planet do we live in?</h1>
+	<div id="wrapper">
+        <!-- This function will ask you in what planet we live in -->
+		<script> //xxxx to script
+		      function question() //need a name for the function
+		      {
+		        var y1 = document.getElementById('planet').value
+		        if (y1 == "Earth" || "earth") {
+		         alert("Correct"); //no equal sign
+		        }
+		        else {
+		            alert("Try Again"); //no equal sign
+		            }
+		        //var oper = document.getElementById('planet').value = alert;
+		      }
+		</script>
+		<div>
+			Give me your best answer <input id="planet" maxlength="30" size="11" type="text"> <button id="earth" onclick="question();">Enter</button>
+<!--
+xxxx should be "input" along with xx being "id"
+-->
+    </div>
+	</div>
+	<footer id="footer"></footer>
+</body>
+</html>
