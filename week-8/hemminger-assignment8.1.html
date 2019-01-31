@@ -46,21 +46,21 @@
   Integer sollicitudin volutpat tellus non faucibus.</p>
 
 <script>
-// Click function for highlighting text
+// Click method for highlighting text
     $(function () {
         $("p").click(function () {
             $(this).css("background-color", "yellow");
             jQuery(this).css("color", "black");
         });
     });
-// Double-Click function to remove highlight from text
+// Double-Click method to remove highlight from text
     $(function () {
         S("p").dblclick(function () {
             $(this).css("background-color", "white");
             $(this).css("color", "black");
         });
     });
-// **Utilizing the toggle function**
+// **Utilizing the toggle method**
     $("p").toggle(
       function(){$("p").css({"color": "orange"});},
       function(){$("p").css({"color": "red"});},
