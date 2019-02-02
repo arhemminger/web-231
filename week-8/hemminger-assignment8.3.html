@@ -1,0 +1,98 @@
+<!--
+============================================
+; Title:  Assignment 8.3 - jQuery
+; Author: Professor Krasso
+; Date:   2 February 2019
+; Modified by: Andrew Hemminger
+; Description: jQuery
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="../site.css">
+
+</head>
+<body>
+
+<!--Using div to create a stylized bar at the top of the page-->
+<div id="topbar"><br></div>
+
+<!--div created to house section 1 with show/hide <p> element on button click -->
+<div class="tl20px">
+
+  <h1>Welcome! - Part A:</h1>
+
+  <p id="sec1" title="Section 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus leo id faucibus commodo. In
+    hac habitasse platea dictumst. Mauris pellentesque ex sed neque dignissim, eget ultrices orci
+    lobortis. Mauris lobortis quis augue et eleifend. Etiam commodo sem id ultrices malesuada. In quam
+    mi, consectetur vitae hendrerit non, tempus et nibh. Suspendisse in venenatis velit. Phasellus neque
+    justo, auctor sed malesuada non, cursus eu justo. Praesent vitae erat at augue ornare venenatis.
+    Sed vulputate ultricies massa, sit amet hendrerit est mattis quis. Integer rhoncus rhoncus dui, eu
+    venenatis neque pharetra eget. Ut finibus, ex id egestas scelerisque, sapien orci pretium dui, quis
+    iaculis leo nisi a enim.
+  </p>
+
+  <button id="btn1">Toggle</button>
+
+</div>
+
+<!--div created to house section 2 with table-->
+<div class="tl20px">
+  <h2>Part B:</h2>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><a href="#" class="fruitId">1</a></td>
+      <td>Blueberry</td>
+    </tr>
+    <tr>
+      <td><a href="#" class="fruitId">2</a></td>
+      <td>Grape</td>
+    </tr>
+    <tr>
+      <td><a href="#" class="fruitId">3</a></td>
+      <td>Kiwi</td>
+    </tr>
+    <tr>
+      <td><a href="#" class="fruitId">4</a></td>
+      <td>Pear</td>
+    </tr>
+    <tr>
+      <td><a href="#" class="fruitId">5</a></td>
+      <td>Pineapple</td>
+    </tr>
+  </table>
+</div>
+
+<script>
+// jQuery method to hide/display <p> text on button click
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      $("#sec1").toggle();
+    });
+  });
+
+// jQuery function to display alert message on table "id" click
+  $(function () {
+        $(".fruitId").click(function (event) {
+            event.preventDefault();
+            var fruitId = $(this).text();
+            var fruitType = $(this).closest("td").next().text();
+            alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}");
+        });
+    });
+</script>
+
+</body>
+</html>
