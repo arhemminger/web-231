@@ -2,13 +2,22 @@
 ============================================
 ; Title:  site.css
 ; Author: Professor Krasso
-; Date:   27 January 2019
+; Date:   2 February 2019
 ; Description: Global styling for week's 7 through 9
 ;===========================================
 */
+body {
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+h1, h2 {
+  font-weight: 500;
+}
 
 table {
   border-collapse: collapse;
+  font-weight: 400;
 }
 
 td, th {
@@ -24,4 +33,14 @@ th {
 
 tr:nth-child(even) {
   background-color: lightsteelblue;
+}
+
+#topbar {
+  width: 100%;
+  background-color: lightgreen;
+}
+
+div.tl20px {
+  margin-top: 20px;
+  margin-left: 20px;
 }
