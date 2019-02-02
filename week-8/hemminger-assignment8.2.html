@@ -14,7 +14,8 @@
   <title>Exercise 8.2</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
-  <style type="text/css">
+<!--CSS styling for the elements on the page-->
+  <style>
     body {
       font-family: Roboto;
       font-weight: 300;
@@ -39,11 +40,11 @@
 
 </head>
 <body>
-
+<!--Using div to create a stylized bar at the top of the page-->
 <div id="TopBar" class="TopBar"><br></div>
 
 <div id="fruits"></div>
-
+<!--Declaring the list array with two fields-->
 <script>
    var fruits = [
       {
@@ -68,7 +69,9 @@
       }
       ];
 
+// adding a title to the array list
   var out = "<h2>My Fruits List </h2><ul>";
+// iterating through the array and outputting it to an unordered list
     for (var x = 0; x < fruits.length; x++) {
         out += "<li>" + fruits[x].id + ": " + fruits[x].type + "</li>";
     }
