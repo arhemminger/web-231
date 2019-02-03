@@ -21,6 +21,9 @@
       cursor: pointer;
       background-color: #ffff99;
     }
+    .hover {
+      background-color: #ffff99;
+    }
   </style>
 </head>
 <body>
@@ -28,8 +31,8 @@
 <div id="emps"></div>
 
 <script>
-
-var employee = function (id, firstName, lastName, title) {
+// declaring variable as function with 4 field entries
+var employee = function(id, firstName, lastName, title) {
   this.id = id;
   this.firstName = firstName;
   this.lastName = lastName;
@@ -38,16 +41,17 @@ var employee = function (id, firstName, lastName, title) {
 
 // create 5 new objects
 const employees = [
-  new employee(1, 'Thomas', 'Edison', 'Software Engineer'),
-  new employee(2, 'Benjamin', 'Franklin', 'Programmer'),
-  new employee(3, 'Nikola', 'Tesla', 'Project Manager'),
-  new employee(4, 'Charles', 'Babbage', 'Project Manager'),
-  new employee(5, 'Alexander', 'Bell', 'Business Analyst')
+  new employee(1, ' Thomas', ' Edison', ' Software Engineer'),
+  new employee(2, ' Benjamin', ' Franklin', ' Programmer'),
+  new employee(3, ' Nikola', ' Tesla', ' Project Manager'),
+  new employee(4, ' Charles', ' Babbage', ' Project Manager'),
+  new employee(5, ' Alexander', ' Bell', ' Business Analyst')
 ];
 
-// function that displays alert based on id
+// function used to get data based off id
 $(function getEmployee(id) {
-  alert(this.id, this.firstName, this.lastName, this.title);
+  if (id === employee.id)
+  return this.id, this.firstName, this.lastName, this.title;
 });
 
 var output = '<h1>Employee Listing</h1>' +
@@ -58,8 +62,9 @@ var output = '<h1>Employee Listing</h1>' +
       '<th>Last Name</th>' +
       '<th>Title</th>' +
       '</tr><tbody>'
+// iterate through employee data and assign to table cells
     employees.forEach(function(employee) {
-      output += '<tr><td>' +
+      output += '<tr id="tblData"><td>' +
       employee.id + '</td><td>' +
       employee.firstName + '</td><td>' +
       employee.lastName + '</td><td>' +
@@ -70,12 +75,26 @@ document.getElementById("emps").innerHTML = output;
 
 
   // jQuery onClick event
+  // function that displays alert based on id
   // Don't remove this, just add your code to the body of the event (curly braces)
   $(function () {
     $("table tr").click(function () {
-
-    })
+      var empStr = $(this).text();
+      alert(empStr);
+      })
   });
+
+// jQuery Mouse over event adds yellow highlight
+$(document).ready(function(){
+   $("#tblData tr").mouseover(function(){
+      $(this).addClass("hover");
+   });
+
+   $("#tblData tr").mouseout(function(){
+      $(this).removeClass("hover");
+   });
+});
+
 </script>
 </body>
 </html>
