@@ -52,14 +52,14 @@ $(function getEmployee(id) {
   return this.id, this.firstName, this.lastName, this.title;
 });
 
-var output = '<h1>Employee Listing</h1>' +
-      '<table>' +
-      '<tr>' +
-      '<th>ID</th>' +
-      '<th>First Name</th>' +
-      '<th>Last Name</th>' +
-      '<th>Title</th>' +
-      '</tr><tbody id="tblData">'
+var output = ['<h1>Employee Listing</h1>',
+      '<table>',
+      '<tr>',
+      '<th>ID</th>',
+      '<th>First Name</th>',
+      '<th>Last Name</th>',
+      '<th>Title</th>',
+      '</tr><tbody id="tblData">'].join("");
 // iterate through employee data and assign to table cells
     employees.forEach(function(employee) {
       output += '<tr ><td>' +
