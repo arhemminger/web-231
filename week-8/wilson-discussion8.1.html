@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discussion 8.1</title>
+    <link rel="stylesheet" href="../site.css" />
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></link> <!--replaced "xxxx" with expected "link" tag-->
+  </head>
+  <body>
+
+    <h1>Busted, broken jquery...</h1>
+    <label for="inputbox">Please Enter Your Name:</label><br />
+    <input
+      name="inputbox"
+      id="inputbox"
+      cols="30"
+      rows="10"
+      placeholder="Name"
+    ></input> <!--replaced "xxxx" with expected "input" tag-->
+
+    <div>
+      <h3>
+        If the jquery is working, the input of the textarea will show below
+      </h3>
+      <h3>Your name is:</h3>
+      <div id="username"></div>
+    </div>
+
+    <hr />
+    <h3>
+      If the jquery is working, the following button will alert your textarea
+      input
+    </h3>
+    <button type="button" id="inputbutton" class="buttoninput">
+      Get My Name!
+    </button>
+
+    <script>//replaced "xxxx" with expected "script" tag
+     $('#inputbox').keyup(function() {
+       $('#username').html($('#inputbox').text());
+      });
+
+      $('.inputbutton').click(function() {
+      alert('Your name is: ' + $('#inputbox').val());
+      });
+    </script>
+
+  </body>
+</html>
